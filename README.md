@@ -1,1 +1,1 @@
-# AngularJS-Project
+Blogging Platform using AngularJS
