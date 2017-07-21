@@ -1,41 +1,23 @@
 <html ng-app="myApp">
     <head>
         <title>BlogIt</title>
+        <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"></link>
         <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="bower_components/stamplay-js-sdk/dist/stamplay.min.js"></script>
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!--Latest compiled and minified JavaScript--> 
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="app.js"></script>
     </head>
     <body ng-controller="myCtrl">
-        <div class="container-fluid">
-            <div class="nav navbar-default">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">BlogIt!</a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-l">
-                <ul class="nav navbar-nav">
-                    <li ui-sref-active="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                    <li ui-sref-active="active"><a href="#">Login</a></li>
-                    <li ui-sref-active="active"><a href="#">Sign Up</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Blogs<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Write a Blog</a></li>
-                            <li><a href="#">View My Blogs</a></li>
-                            <li><a href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
+        
         <div class="jumbotron">
+            <div class="container-fliud">
+                <div ng-include="'structure/menu.html'"></div>
             <center>
                 <h1>BlogIt!</h1>
                 <p>The Worlds Biggest blogging platform</p>
@@ -43,5 +25,6 @@
             </center>
         </div>
         </div>
+        <div ng-view></div>
     </body>
 </html>
